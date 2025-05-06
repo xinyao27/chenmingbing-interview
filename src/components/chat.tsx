@@ -94,7 +94,7 @@ export default function Chat({
             <div
               key={m.id}
               className={clsx(
-                "flex items-end gap-2 animate-fadeIn",
+                "flex items-end gap-2 animate-fadeIn mb-4",
                 m.role === "user" ? "justify-end" : "justify-start"
               )}
             >
