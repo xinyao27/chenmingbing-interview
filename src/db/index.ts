@@ -1,5 +1,5 @@
 import { drizzle } from "drizzle-orm/node-postgres";
-import { Pool } from "pg"; //
+import { Pool } from "pg";
 import * as schema from "./schema";
 import "dotenv/config";
 
@@ -12,7 +12,7 @@ const pool = new Pool({
   connectionString: databaseUrl,
   max: 20,
   idleTimeoutMillis: 30000,
-  connectionTimeoutMillis: 2000,
+  connectionTimeoutMillis: 30000,
 });
 
 export const db = drizzle(pool, { schema });

@@ -5,7 +5,7 @@ import { openai } from "@ai-sdk/openai";
 import { db } from "@/db";
 import { messagesTable, Message } from "@/db/schema";
 import { HTTPException } from "hono/http-exception";
-import { sql, desc, asc, eq, inArray } from "drizzle-orm";
+import { sql, desc, asc, inArray } from "drizzle-orm";
 
 export const runtime = "nodejs";
 

@@ -62,7 +62,6 @@ export default function ChatPage() {
     messages,
     input,
     handleInputChange,
-    handleSubmit: originalHandleSubmit,
     isLoading: isAiLoading,
     error: aiError,
     setInput,
