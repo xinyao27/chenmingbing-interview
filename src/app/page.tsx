@@ -76,12 +76,12 @@ const MessageSquareIcon = (props: React.SVGProps<SVGSVGElement>) => (
 export default function ChatPage() {
   const [chats, setChats] = useState<ChatMessages>([]);
   const [activeChatId, setActiveChatId] = useState<string | null>(null);
-  const [isLoadingChats, setIsLoadingChats] = useState(true);
+  // const [isLoadingChats, setIsLoadingChats] = useState(true);
   const [fetchChatsError, setFetchChatsError] = useState<string | null>(null);
 
   useEffect(() => {
     async function fetchChats() {
-      setIsLoadingChats(true);
+      // setIsLoadingChats(true);
       setFetchChatsError(null);
       try {
         const response = await fetch("/api/chats");
@@ -98,7 +98,7 @@ export default function ChatPage() {
           error instanceof Error ? error.message : "An unknown error occurred"
         );
       } finally {
-        setIsLoadingChats(false);
+        // setIsLoadingChats(false);
       }
     }
     fetchChats();
@@ -184,14 +184,14 @@ export default function ChatPage() {
   }, [setMessages, setInput]);
 
   const pageContent = () => {
-    if (isLoadingChats) {
-      return (
-        <div className="flex flex-col justify-center items-center h-full text-gray-500 dark:text-gray-400 ">
-          <Spinner className="w-8 h-8 " />
-          <p className="text-lg mt-4">Loading chats...</p>
-        </div>
-      );
-    }
+    // if (isLoadingChats) {
+    //   return (
+    //     <div className="flex flex-col justify-center items-center h-full text-gray-500 dark:text-gray-400 ">
+    //       <Spinner className="w-8 h-8 " />
+    //       <p className="text-lg mt-4">Loading chats...</p>
+    //     </div>
+    //   );
+    // }
 
     if (fetchChatsError) {
       return (
