@@ -22,7 +22,7 @@ A real-time chat application built with modern web technologies, supporting chat
 - **AI**:
   - [OpenAI API](https://openai.com/) integration with GPT models
 - **Database**:
-  - SQLite (extensible to other databases)
+  - Postgres
 
 ## File Structure
 
